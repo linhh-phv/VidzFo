@@ -7,6 +7,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.ActivityCompat
 import com.wztek.vidzfo.utils.VideoFolderUtils
+import java.sql.DriverManager.println
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,14 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         // danh sách chapter
         val chapterVideosMap = VideoFolderUtils.getChapterVideos()
-
-        for ((chapter, videos) in chapterVideosMap) {
-            println("Chapter: $chapter")
-            for (video in videos) {
-                println("Video: $video")
-            }
-            println()
-        }
+        val x = chapterVideosMap
 
     }
 
